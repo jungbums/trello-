@@ -77,7 +77,7 @@ void DisplaySysInfo::drawARMSensorCurve()
             armPlotData.yData[armPlotData.index] = getNode->armuW;
             armPlotData.xData[armPlotData.index] = armPlotData.index;
             armPlotData.index++;
-        } else {//사용량을 초과했을 때 초기화시키는 듯
+        } else {//사용량을 초과했을 때 뒤로 한 칸씩 땡겨서 마지막 공간창출
             armPlotData.yData[99] = getNode->armuW;
             for (int i = 0; i < 100; i++) {
                 armPlotData.yData[i] = armPlotData.yData[i + 1];
